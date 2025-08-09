@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern, youthful font */
+  background-color: #F3F4F6; /* Light gray for a clean look */
+  color: #1F2937;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #1F2937;
+}
+
+a {
+  text-decoration: none;
+  color: #1F2937;
+}
+
+a:hover {
+  color: #FF6B6B; /* Coral Pink on hover */
+  transition: color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #4FD1C5; /* Soft Teal on hover */
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sidebar {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 16rem;
+  z-index: 50;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+[dir="ltr"] .sidebar {
+  left: 0;
+}
+
+[dir="rtl"] .sidebar {
+  right: 0;
+}
+
+.sidebar-logo {
+  margin-top: 1rem;
+  width: 120px; /* Adjusted for logo size */
+  border-radius: 50%;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #1F2937;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #FF6B6B; /* Coral Pink on hover */
+}
+
+.navbar {
+  background-color: #4FD1C5; /* Soft Teal for navbar */
+  color: #FFFFFF;
+}
+
+.navbar-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.sidebar img:hover{
+  transform: rotateX(360deg);
+  opacity: 50%;
+}
+
+.product-card {
+  background-color: #FFFFFF;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem; /* Softer, modern corners */
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  max-width: 20rem;
+  width: 100%;
+}
+
+.product-card:hover:not(.opacity-50) {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px); /* Subtle lift effect */
+}
+
+.product-modal {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for modals */
+}
+
+.product-modal img {
+  border-radius: 0.75rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.purchase-button {
+  background-color: #FF6B6B; /* Coral Pink for buttons */
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.purchase-button:hover {
+  background-color: #FBBF24; /* Bright Yellow on hover */
+  transform: scale(1.05);
+}
+
+.language-button {
+  background-color: #1F2937;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin: 0.25rem;
+}
+
+.language-button:hover {
+  background-color: #4FD1C5; /* Soft Teal on hover */
+}
+
+.filter-select {
+  background-color: #FFFFFF;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1F2937;
+}
+
+main {
+  width: calc(100% - 16rem);
+  box-sizing: border-box;
+  margin-left: 16rem;
+}
+
+[dir="rtl"] main {
+  margin-left: 0;
+  margin-right: 16rem;
+}
+
+[dir="ltr"] main {
+  margin-left: 16rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 75%;
+    max-width: 250px;
+  }
+
+  main {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .product-card {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-modal {
+    max-width: 95vw;
+    max-height: 85vh;
+    padding: 1.5rem;
+  }
+
+  [dir="ltr"] main {
+    margin-left: 0;
+  }
+
+  [dir="rtl"] main {
+    margin-right: 0;
+  }
+}
+
+[dir="rtl"] .language-button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
