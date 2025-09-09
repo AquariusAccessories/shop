@@ -7,7 +7,7 @@ function About() {
   const storeImages = [
     {
       id: 1,
-      src: './assets/images/keepsake-box.jpg',
+      src: './assets/images/keepsake-box.png',
       alt: t('Keepsake Box'),
     },
   ];

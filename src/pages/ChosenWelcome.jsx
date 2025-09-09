@@ -70,7 +70,7 @@ function ChosenWelcome() {
         <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('Your Gift Package')}</h2>
         <p className="text-gray-600 mb-4">{t('Package Description')}</p>
         <img
-          src="./assets/images/comic-visual.jpg"
+          src="./assets/images/comic-visual.png"
           alt={t('Collectible Comic')}
           className="w-full h-48 object-cover rounded-md mb-4"
         />

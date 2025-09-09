@@ -37,19 +37,19 @@ export const products = [
     id: 2,
     title: { en: 'Coral Hoop Earrings', fa: 'گوشواره حلقه‌ای مرجانی' },
     description: { en: 'Bold coral hoop earrings made from lightweight acrylic.', fa: 'گوشواره‌های حلقه‌ای مرجانی سبک و جذاب.' },
-    image: './assets/images/earring2_coral_1.jpg',
+    image: './assets/images/earring2.jpg',
     category: 'Earrings',
     material: { en: 'Acrylic', fa: 'اکریلیک' },
     dimensions: { en: '4 cm', fa: '۴ سانتی‌متر' },
     price: { en: '$30', fa: '۱,۴۵۰,۰۰۰ تومان' },
     thumbnailsByColor: {
       '#FF7F50': [
-        './assets/images/earring2_coral_1.jpg',
-        './assets/images/earring2_coral_2.jpg',
+        './assets/images/earring2.jpg',
+        './assets/images/earring2 (2).jpg',
       ],
       '#40E0D0': [
-        './assets/images/earring2_turquoise_1.jpg',
-        './assets/images/earring2_turquoise_2.jpg',
+        './assets/images/earring2 (3).jpg',
+        './assets/images/earring2 (3).jpg',
       ],
     },
     colors: [
@@ -65,23 +65,23 @@ export const products = [
     id: 3,
     title: { en: 'Star Keychain', fa: 'جاکلیدی ستاره‌ای' },
     description: { en: 'Shiny star-shaped acrylic keychain with glitter accents.', fa: 'جاکلیدی ستاره‌ای براق با تزئینات اکلیلی.' },
-    image: './assets/images/keychain1_gold_1.jpg',
+    image: './assets/images/keychain1.jpg',
     category: 'Keychains',
     material: { en: 'Acrylic', fa: 'اکریلیک' },
     dimensions: { en: '6 cm', fa: '۶ سانتی‌متر' },
     price: { en: '$15', fa: '۷۵۰,۰۰۰ تومان' },
     thumbnailsByColor: {
       '#FFD700': [
-        './assets/images/keychain1_gold_1.jpg',
-        './assets/images/keychain1_gold_2.jpg',
+        './assets/images/keychain1.jpg',
+        './assets/images/keychain1.jpg',
       ],
       '#C0C0C0': [
-        './assets/images/keychain1_silver_1.jpg',
-        './assets/images/keychain1_silver_2.jpg',
+        './assets/images/keychain1 (2).jpg',
+        './assets/images/keychain1 (2).jpg',
       ],
       '#800080': [
-        './assets/images/keychain1_purple_1.jpg',
-        './assets/images/keychain1_purple_2.jpg',
+        './assets/images/keychain1.jpg',
+        './assets/images/keychain1 (2).jpg',
       ],
     },
     colors: [
@@ -98,19 +98,19 @@ export const products = [
     id: 4,
     title: { en: 'Heart Keychain', fa: 'جاکلیدی قلبی' },
     description: { en: 'Cute heart-shaped acrylic keychain in pastel pink.', fa: 'جاکلیدی قلبی زیبا به رنگ صورتی پاستلی.' },
-    image: './assets/images/keychain2_pink_1.jpg',
+    image: './assets/images/keychain2.jpg',
     category: 'Keychains',
     material: { en: 'Acrylic', fa: 'اکریلیک' },
     dimensions: { en: '5 cm', fa: '۵ سانتی‌متر' },
     price: { en: '$12', fa: '۶۰۰,۰۰۰ تومان' },
     thumbnailsByColor: {
       '#FFC1CC': [
-        './assets/images/keychain2_pink_1.jpg',
-        './assets/images/keychain2_pink_2.jpg',
+        './assets/images/keychain2.jpg',
+        './assets/images/keychain2.jpg',
       ],
       '#87CEEB': [
-        './assets/images/keychain2_blue_1.jpg',
-        './assets/images/keychain2_blue_2.jpg',
+        './assets/images/keychain2 (2).jpg',
+        './assets/images/keychain2 (2).jpg',
       ],
     },
     colors: [
@@ -135,7 +135,7 @@ export const products = [
     colors: [], // No color options
     thumbnails: [
       './assets/images/earring3.jpg',
-      './assets/images/earring3_2.jpg',
+      './assets/images/earring3 (2).jpg',
     ],
     hasFixedPrice: false,
     inStock: true,
@@ -154,7 +154,7 @@ export const products = [
     colors: [], // No color options
     thumbnails: [
       './assets/images/earring4.jpg',
-      './assets/images/earring4_2.jpg',
+      './assets/images/earring4 (2).jpg',
     ],
     hasFixedPrice: false,
     inStock: false,
