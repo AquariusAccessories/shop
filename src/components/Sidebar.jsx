@@ -20,7 +20,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
       <div className="p-4 flex flex-col h-full">
         <a href="/shop/#/">
           <img
-            src="./assets/images/aquarius-logo.jpg" // Update with Aquarius logo
+            src="./assets/images/aquarius-logo.jpg"
             alt={t('Brand')}
             className="sidebar-logo mx-auto"
           />
@@ -31,6 +31,9 @@ function Sidebar({ isOpen, toggleSidebar }) {
           </a>
           <a href="/shop/#/about" className="block py-2" onClick={() => toggleSidebar()}>
             {t('About')}
+          </a>
+          <a href="/shop/#/chosen-welcome?user=test" className="block py-2" onClick={() => toggleSidebar()}>
+            {t('Chosen Welcome')} (Test)
           </a>
         </nav>
         <div className="mt-4 flex gap-2">

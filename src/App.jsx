@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import Shop from './pages/Shop';
 import About from './pages/About';
+import ChosenWelcome from './pages/ChosenWelcome';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -28,6 +29,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Shop />} />
               <Route path="/about" element={<About />} />
+              <Route path="/chosen-welcome" element={<ChosenWelcome />} />
             </Routes>
           </main>
         </div>

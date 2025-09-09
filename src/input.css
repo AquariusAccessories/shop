@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'Poppins', sans-serif; /* Modern, youthful font */
-  background-color: #F3F4F6; /* Light gray for a clean look */
+  font-family: 'Poppins', sans-serif;
+  background-color: #F3F4F6;
   color: #1F2937;
   margin: 0;
 }
@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: #FF6B6B; /* Coral Pink on hover */
+  color: #FF6B6B;
   transition: color 0.3s ease;
 }
 
@@ -29,7 +29,7 @@ button {
 }
 
 button:hover {
-  background-color: #4FD1C5; /* Soft Teal on hover */
+  background-color: #4FD1C5;
   transform: scale(1.05);
 }
 
@@ -46,7 +46,7 @@ button:disabled {
   bottom: 0;
   width: 16rem;
   z-index: 50;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 [dir="ltr"] .sidebar {
@@ -59,7 +59,7 @@ button:disabled {
 
 .sidebar-logo {
   margin-top: 1rem;
-  width: 120px; /* Adjusted for logo size */
+  width: 120px;
   border-radius: 50%;
 }
 
@@ -72,11 +72,11 @@ button:disabled {
 }
 
 .sidebar a:hover {
-  color: #FF6B6B; /* Coral Pink on hover */
+  color: #FF6B6B;
 }
 
 .navbar {
-  background-color: #4FD1C5; /* Soft Teal for navbar */
+  background-color: #4FD1C5;
   color: #FFFFFF;
 }
 
@@ -86,7 +86,7 @@ button:disabled {
   border-radius: 50%;
 }
 
-.sidebar img:hover{
+.sidebar img:hover {
   transform: rotateX(360deg);
   opacity: 50%;
 }
@@ -94,7 +94,7 @@ button:disabled {
 .product-card {
   background-color: #FFFFFF;
   border: 1px solid #e5e7eb;
-  border-radius: 1rem; /* Softer, modern corners */
+  border-radius: 1rem;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   max-width: 20rem;
@@ -103,7 +103,7 @@ button:disabled {
 
 .product-card:hover:not(.opacity-50) {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-4px); /* Subtle lift effect */
+  transform: translateY(-4px);
 }
 
 .product-modal {
@@ -116,17 +116,28 @@ button:disabled {
   padding: 2rem;
   position: relative;
   box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for modals */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.product-modal img {
+@media (min-width: 768px) {
+  .product-modal {
+    max-width: 600px;
+    padding: 1.5rem;
+  }
+  .product-modal img.rounded-full {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.product-modal img:not(.rounded-full) {
   border-radius: 0.75rem;
   max-width: 100%;
   height: auto;
 }
 
 .purchase-button {
-  background-color: #FF6B6B; /* Coral Pink for buttons */
+  background-color: #FF6B6B;
   color: #FFFFFF;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -137,7 +148,7 @@ button:disabled {
 }
 
 .purchase-button:hover {
-  background-color: #FBBF24; /* Bright Yellow on hover */
+  background-color: #FBBF24;
   transform: scale(1.05);
 }
 
@@ -151,7 +162,7 @@ button:disabled {
 }
 
 .language-button:hover {
-  background-color: #4FD1C5; /* Soft Teal on hover */
+  background-color: #4FD1C5;
 }
 
 .filter-select {
@@ -177,6 +188,56 @@ main {
 [dir="ltr"] main {
   margin-left: 16rem;
   padding-left: 1rem;
+}
+
+.chosen-banner {
+  background-color: #FF6B6B;
+  color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.sparkle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: sparkle 2s infinite;
+}
+
+.sparkle:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  bottom: 15%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+.bg-checkered {
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+                    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #ccc 75%),
+                    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  background-size: 8px 8px;
 }
 
 @media (max-width: 768px) {

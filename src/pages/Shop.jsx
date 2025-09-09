@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
@@ -50,6 +51,25 @@ function Shop() {
 
   return (
     <div className="relative w-full">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="chosen-banner mb-6 relative overflow-hidden"
+      >
+        <div className="sparkle-overlay">
+          <span className="sparkle">✨</span>
+          <span className="sparkle">🌟</span>
+        </div>
+        <h2 className="text-2xl font-bold mb-2">{t('Become Chosen')}</h2>
+        <p className="mb-4">{t('Become Chosen Description')}</p>
+        <a
+          href="https://wa.me/989125574218?text=Hi,%20I%20want%20to%20become%20a%20Chosen%20Creator!"
+          className="purchase-button animate-pulse"
+        >
+          {t('Learn How')}
+        </a>
+      </motion.section>
       <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('Shop')}</h1>
       <div className="mb-4">
         <select
@@ -63,7 +83,7 @@ function Shop() {
         </select>
       </div>
       <div className="absolute top-10 left-10 opacity-10 pointer-events-none">
-        <span className="text-6xl">✨</span> {/* Updated to a sparkle emoji for a youthful vibe */}
+        <span className="text-6xl">✨</span>
       </div>
       <div className="absolute bottom-20 right-10 opacity-10 pointer-events-none">
         <span className="text-6xl">🌟</span>
