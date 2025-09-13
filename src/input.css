@@ -240,6 +240,29 @@ main {
   background-size: 8px 8px;
 }
 
+.level-card {
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.level-card:hover:not(.opacity-75) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.zigzag-line {
+  height: 60px;
+  width: 2px;
+  position: relative;
+  margin: 1rem auto 0;
+  border-left: 2px solid #9CA3AF;
+  z-index: 5;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     width: 75%;
@@ -269,6 +292,11 @@ main {
 
   [dir="rtl"] main {
     margin-right: 0;
+  }
+
+  .zigzag-line {
+    height: 40px;
+    margin: 0.75rem auto 0;
   }
 }
 
