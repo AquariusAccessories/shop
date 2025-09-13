@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
+import JoinChosen from './pages/JoinChosen';
 import Shop from './pages/Shop';
 import About from './pages/About';
 import ChosenWelcome from './pages/ChosenWelcome';
@@ -30,6 +31,7 @@ function App() {
               <Route path="/" element={<Shop />} />
               <Route path="/about" element={<About />} />
               <Route path="/chosen-welcome" element={<ChosenWelcome />} />
+              <Route path="/join-chosen" element={<JoinChosen />} />
             </Routes>
           </main>
         </div>

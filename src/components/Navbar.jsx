@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { FaStar } from 'react-icons/fa';
 
 function Navbar({ toggleSidebar }) {
   const { t } = useTranslation();
@@ -13,8 +14,8 @@ function Navbar({ toggleSidebar }) {
         />
       </a>
       <div className="flex gap-4 items-center">
-        <a href="/shop/#/chosen-welcome" className="text-white hover:text-gray-200 transition-colors">
-          {t('Chosen Creators')}
+        <a href="/shop/#/join-chosen" className="text-white hover:text-gray-200 transition-colors">
+          <FaStar color='white' size={24} title={t('JoinChosen')} />
         </a>
         <button
           onClick={toggleSidebar}

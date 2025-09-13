@@ -20,9 +20,9 @@ function ChosenWelcome() {
   if (!userId) {
     return (
       <div className="p-4 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('Access Restricted')}</h1>
-        <p className="text-gray-600 mb-6">{t('Chosen Access Message')}</p>
-        <Link to="/" className="purchase-button">{t('Back to Shop')}</Link>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('AccessRestricted')}</h1>
+        <p className="text-gray-600 mb-6">{t('ChosenAccessMessage')}</p>
+        <Link to="/" className="purchase-button">{t('BackToShop')}</Link>
       </div>
     );
   }
@@ -30,117 +30,117 @@ function ChosenWelcome() {
   const levels = [
     {
       id: 1,
-      title: t('Level 1: Welcome to the Journey'),
-      task: t('Follow @aquariusaccs on Instagram and join the Chosen Creators Club.'),
-      badge: t('Follower Star'),
-      reward: t('20% off with CHOSEN20'),
+      title: t('Level1Welcome'),
+      task: t('Level1Task'),
+      badge: t('FollowerStar'),
+      reward: t('Level1Reward'),
       action: () => {
         setScreenshotSubmitted({ ...screenshotSubmitted, 1: true });
-        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Submit Follow Screenshot'))}`;
+        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('SubmitFollowScreenshot'))}`;
       },
-      buttonText: screenshotSubmitted[1] ? t('Screenshot Submitted') : t('Submit Follow'),
+      buttonText: screenshotSubmitted[1] ? t('ScreenshotSubmitted') : t('SubmitFollow'),
       prerequisite: null,
     },
     {
       id: 2,
-      title: t('Level 2: Share the Sparkle'),
-      task: t('Share a story, post, or reel with #ChosenByAquarius.'),
-      badge: t('Storyteller Gem'),
-      reward: t('10% cashback up to $20'),
+      title: t('Level2Share'),
+      task: t('Level2Task'),
+      badge: t('StorytellerGem'),
+      reward: t('Level2Reward'),
       action: () => {
         setScreenshotSubmitted({ ...screenshotSubmitted, 2: true });
-        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Submit Share Screenshot'))}`;
+        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('SubmitShareScreenshot'))}`;
       },
-      buttonText: screenshotSubmitted[2] ? t('Screenshot Submitted') : t('Submit Share'),
+      buttonText: screenshotSubmitted[2] ? t('ScreenshotSubmitted') : t('SubmitShare'),
       prerequisite: 1,
     },
     {
       id: 3,
-      title: t('Level 3: Gift a Friend'),
-      task: t('Gift a friend using code GIFT in the Shop.'),
-      badge: t('Good Friend Badge'),
-      reward: t('Access exclusive engravable boxes'),
+      title: t('Level3Gift'),
+      task: t('Level3Task'),
+      badge: t('GoodFriendBadge'),
+      reward: t('Level3Reward'),
       action: () => window.location.href = '/#/shop',
-      buttonText: t('Go to Shop'),
+      buttonText: t('GoToShop'),
       prerequisite: 2,
     },
     {
       id: 4,
-      title: t('Level 4: Loyal Creator'),
-      task: t('Reach $100 in total purchases.'),
-      badge: t('Loyal Creator Crown'),
-      reward: t('Free engraving on one box'),
-      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Check Purchase Amount'))}`,
-      buttonText: t('Check Purchases'),
+      title: t('Level4Loyal'),
+      task: t('Level4Task'),
+      badge: t('LoyalCreatorCrown'),
+      reward: t('Level4Reward'),
+      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('CheckPurchaseAmount'))}`,
+      buttonText: t('CheckPurchases'),
       prerequisite: 3,
     },
     {
       id: 5,
-      title: t('Level 5: Elite Creator'),
-      task: t('Mention @aquariusaccs in a reel/post with 500+ views or 50+ likes.'),
-      badge: t('Elite Creator Scepter'),
-      reward: t('Access exclusive Starlight Keychain'),
+      title: t('Level5Elite'),
+      task: t('Level5Task'),
+      badge: t('EliteCreatorScepter'),
+      reward: t('Level5Reward'),
       action: () => {
         setScreenshotSubmitted({ ...screenshotSubmitted, 5: true });
-        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Submit Mention Screenshot'))}`;
+        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('SubmitMentionScreenshot'))}`;
       },
-      buttonText: screenshotSubmitted[5] ? t('Screenshot Submitted') : t('Submit Mention'),
+      buttonText: screenshotSubmitted[5] ? t('ScreenshotSubmitted') : t('SubmitMention'),
       prerequisite: 4,
     },
     {
       id: 6,
-      title: t('Level 6: Community Contributor'),
-      task: t('Comment on 5 @aquariusaccs posts.'),
-      badge: t('Contributor Badge'),
-      reward: t('Early access to new product drops'),
+      title: t('Level6Contributor'),
+      task: t('Level6Task'),
+      badge: t('ContributorBadge'),
+      reward: t('Level6Reward'),
       action: () => {
         setScreenshotSubmitted({ ...screenshotSubmitted, 6: true });
-        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Submit Comment Screenshot'))}`;
+        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('SubmitCommentScreenshot'))}`;
       },
-      buttonText: screenshotSubmitted[6] ? t('Screenshot Submitted') : t('Submit Comments'),
+      buttonText: screenshotSubmitted[6] ? t('ScreenshotSubmitted') : t('SubmitComments'),
       prerequisite: 5,
     },
     {
       id: 7,
-      title: t('Level 7: Brand Ambassador'),
-      task: t('Get 3 friends to follow @aquariusaccs.'),
-      badge: t('Ambassador Badge'),
-      reward: t('15% discount on bundles'),
+      title: t('Level7Ambassador'),
+      task: t('Level7Task'),
+      badge: t('AmbassadorBadge'),
+      reward: t('Level7Reward'),
       action: () => {
         setScreenshotSubmitted({ ...screenshotSubmitted, 7: true });
-        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Submit Friends Follow Screenshot'))}`;
+        window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('SubmitFriendsFollowScreenshot'))}`;
       },
-      buttonText: screenshotSubmitted[7] ? t('Screenshot Submitted') : t('Submit Friends Follow'),
+      buttonText: screenshotSubmitted[7] ? t('ScreenshotSubmitted') : t('SubmitFriendsFollow'),
       prerequisite: 6,
     },
     {
       id: 8,
-      title: t('Level 8: Master Creator'),
-      task: t('Create and share a custom design idea via WhatsApp.'),
-      badge: t('Master Badge'),
-      reward: t('Free custom product consultation'),
-      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Submit Design Idea'))}`,
-      buttonText: t('Submit Design'),
+      title: t('Level8Master'),
+      task: t('Level8Task'),
+      badge: t('MasterBadge'),
+      reward: t('Level8Reward'),
+      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('SubmitDesignIdea'))}`,
+      buttonText: t('SubmitDesign'),
       prerequisite: 7,
     },
     {
       id: 9,
-      title: t('Level 9: VIP Collector'),
-      task: t('Collect all 3 box sizes.'),
-      badge: t('Collector Badge'),
-      reward: t('Free limited-edition accessory'),
-      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Check Box Collection'))}`,
-      buttonText: t('Check Collection'),
+      title: t('Level9Collector'),
+      task: t('Level9Task'),
+      badge: t('CollectorBadge'),
+      reward: t('Level9Reward'),
+      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('CheckBoxCollection'))}`,
+      buttonText: t('CheckCollection'),
       prerequisite: 8,
     },
     {
       id: 10,
-      title: t('Level 10: Legend'),
-      task: t('Reach $500 in purchases.'),
-      badge: t('Legend Badge'),
-      reward: t('Lifetime 10% discount and exclusive events'),
-      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('Check Lifetime Purchases'))}`,
-      buttonText: t('Check Lifetime Purchases'),
+      title: t('Level10Legend'),
+      task: t('Level10Task'),
+      badge: t('LegendBadge'),
+      reward: t('Level10Reward'),
+      action: () => window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(t('CheckLifetimePurchases'))}`,
+      buttonText: t('CheckLifetimePurchases'),
       prerequisite: 9,
     },
   ];
@@ -148,12 +148,12 @@ function ChosenWelcome() {
   const handleEngravingSubmit = (e) => {
     e.preventDefault();
     if (!hasGoodFriendBadge) {
-      alert(t('Badge Required'));
+      alert(t('BadgeRequired'));
       return;
     }
     setFormSubmitted(true);
     window.location.href = `https://wa.me/989125574218?text=${encodeURIComponent(
-      t('Engraving Request Message', { name, boxSize, engravingText })
+      t('EngravingRequestMessage', { name, boxSize, engravingText })
     )}`;
   };
 
@@ -165,14 +165,28 @@ function ChosenWelcome() {
 
   return (
     <div className="p-4 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('Welcome Chosen Creator')}</h1>
+      <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('WelcomeChosenCreator')}</h1>
       <p className="text-gray-600 mb-6">
-        {name ? t('Personalized Welcome', { name }) : t('Chosen Explanation')}
+        {name ? t('PersonalizedWelcome', { name }) : t('ChosenExplanation')}
       </p>
 
+      <motion.section
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="chosen-banner mb-6 relative overflow-hidden"
+      >
+        <div className="sparkle-overlay">
+          <span className="sparkle">✨</span>
+          <span className="sparkle">🌟</span>
+        </div>
+        <h2 className="text-2xl font-bold mb-2">{t('CreatorJourneyExplanation')}</h2>
+        <p className="mb-4">{t('CreatorJourneyExplanationDescription')}</p>
+      </motion.section>
+
       <section className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('Your Creator Journey')}</h2>
-        <p className="text-gray-600 mb-4 font-semibold">{t('More Levels Coming')}</p>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('YourCreatorJourney')}</h2>
+        <p className="text-gray-600 mb-4 font-semibold">{t('MoreLevelsComing')}</p>
         <div className="flex flex-col items-center gap-8">
           {levels.map((level, index) => (
             <div key={level.id} className="relative">
@@ -216,13 +230,13 @@ function ChosenWelcome() {
       </section>
 
       <section className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('Personalize Your Keepsake')}</h2>
-        <p className="text-gray-600 mb-4">{t('Engraving Description')}</p>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('PersonalizeYourKeepsake')}</h2>
+        <p className="text-gray-600 mb-4">{t('EngravingDescription')}</p>
         {!formSubmitted ? (
           <form onSubmit={handleEngravingSubmit} className="flex flex-col gap-4">
             <input
               type="text"
-              placeholder={t('Your Name')}
+              placeholder={t('YourName')}
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="border border-gray-300 rounded-md p-2"
@@ -233,13 +247,13 @@ function ChosenWelcome() {
               onChange={(e) => setBoxSize(e.target.value)}
               className="border border-gray-300 rounded-md p-2"
             >
-              <option value="small">{t('Small Box')}</option>
-              <option value="medium">{t('Medium Box')}</option>
-              <option value="large">{t('Large Box')}</option>
+              <option value="small">{t('SmallBox')}</option>
+              <option value="medium">{t('MediumBox')}</option>
+              <option value="large">{t('LargeBox')}</option>
             </select>
             <input
               type="text"
-              placeholder={t('Engraving Text')}
+              placeholder={t('EngravingText')}
               value={engravingText}
               onChange={(e) => setEngravingText(e.target.value)}
               className="border border-gray-300 rounded-md p-2"
@@ -252,12 +266,12 @@ function ChosenWelcome() {
                 checked={hasGoodFriendBadge}
                 onChange={(e) => setHasGoodFriendBadge(e.target.checked)}
               />
-              {t('I Have Good Friend Badge')}
+              {t('IHaveGoodFriendBadge')}
             </label>
-            <button type="submit" className="purchase-button">{t('Submit Engraving')}</button>
+            <button type="submit" className="purchase-button">{t('SubmitEngraving')}</button>
           </form>
         ) : (
-          <p className="text-gray-600">{t('Engraving Submitted', { name, boxSize, engravingText })}</p>
+          <p className="text-gray-600">{t('EngravingSubmitted', { name, boxSize, engravingText })}</p>
         )}
       </section>
     </div>

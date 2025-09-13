@@ -14,7 +14,7 @@ class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return <p className="text-red-600 text-center">Something went wrong with this product.</p>;
+      return <p className="text-red-600 text-center">{t('ProductError')}</p>;
     }
     return this.props.children;
   }
@@ -61,13 +61,13 @@ function Shop() {
           <span className="sparkle">✨</span>
           <span className="sparkle">🌟</span>
         </div>
-        <h2 className="text-2xl font-bold mb-2">{t('Become Chosen')}</h2>
-        <p className="mb-4">{t('Become Chosen Description')}</p>
+        <h2 className="text-2xl font-bold mb-2">{t('BecomeChosen')}</h2>
+        <p className="mb-4">{t('BecomeChosenDescription')}</p>
         <a
-          href="https://wa.me/989125574218?text=Hi,%20I%20want%20to%20become%20a%20Chosen%20Creator!"
+          href="https://wa.me/989125574218?text=Hi,%20I%20want%20to%20learn%20how%20to%20become%20a%20Chosen%20Creator!"
           className="purchase-button animate-pulse"
         >
-          {t('Learn How')}
+          {t('LearnHow')}
         </a>
       </motion.section>
       <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('Shop')}</h1>
@@ -96,7 +96,7 @@ function Shop() {
         next={loadMore}
         hasMore={hasMore}
         loader={<h4 className="text-center my-4">{t('Loading')}</h4>}
-        endMessage={<p className="text-center my-4">{t('No more products')}</p>}
+        endMessage={<p className="text-center my-4">{t('NoMoreProducts')}</p>}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto items-start">
           {displayedProducts.map((product) => (
