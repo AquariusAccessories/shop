@@ -60,7 +60,7 @@ function ChosenWelcome() {
       task: t('Level3Task'),
       badge: t('GoodFriendBadge'),
       reward: t('Level3Reward'),
-      action: () => window.location.href = '/#/shop',
+      action: () => window.location.href = '/',
       buttonText: t('GoToShop'),
       prerequisite: 2,
     },
